@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<HBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      stylesheets="@hello-view.css"
+      fx:controller="com.example.citas_java.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <VBox alignment="CENTER" spacing="20.0" styleClass="w-300">
+        <HBox alignment="CENTER" spacing="20.0">
+            <Label text="Tareas" />
+            <Button text="Agregar" onAction="#addTask" fx:id="addTaskButton"/>
+        </HBox>
+        <TableView fx:id="tableTasks">
+            <columns>
+                <TableColumn text="Nombre">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nombre"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Descripción">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="descripcion"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Fecha límite">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="fechaTermino"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <VBox alignment="CENTER" spacing="20.0" styleClass="w-300">
+        <Label text="Alumnos" />
+        <TableView fx:id="tableAlumnos">
+            <columns>
+                <TableColumn text="Nombre">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Apellido">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Número de control">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="controlNumber"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <VBox alignment="CENTER" spacing="20.0" styleClass="w-300">
+        <Label text="Hilos activos" />
+        <TableView fx:id="hilosActivos">
+            <columns>
+                <TableColumn text="Nombre">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Estado">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="state"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Prioridad">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="priority"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+</HBox>

@@ -1,0 +1,8 @@
+#progressBar .bar {
+    -fx-background-insets: 0;
+}
+
+#progressBar .track {
+    -fx-background-color: #e6e6e6;
+    -fx-background-insets: 0;
+}
